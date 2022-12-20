@@ -80,7 +80,7 @@
 
         &__list {
             margin-left: 50px;
-            // z-index: -1;
+            z-index: -1;
 
             ul {
                 column-gap: 24px;
@@ -89,7 +89,7 @@
                 line-height: 27px;
                 text-transform: uppercase;
                 transform: translateX(-200px);
-                // opacity: 0;
+                opacity: 0;
             }
         }
 
@@ -191,5 +191,66 @@
         font-weight: 400;
         line-height: 19px;
         color: $gray ;
+    }
+
+    &__values {
+        column-gap: 10px;
+    }
+
+    &__item {
+        color: $sea;
+    }
+
+    &__value {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 47px;
+        min-width: 55px;
+        text-align: center;
+    }
+
+    &__info {
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+.description {
+    margin-top: 7%;
+    max-width: 540px;
+    animation: move 0.75s ease-in-out;
+
+    &-title {
+        h1 {
+            font-weight: 600;
+            font-size: 100px;
+            line-height: 100px;
+        }
+    }
+
+    &-subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: $sea;
+        margin-top: 26px;
+    }
+
+    &-button {
+        @include button;
+        @include hoverViolet;
+        margin-top: 36px;
+    }
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }

@@ -1,5 +1,5 @@
 body {
-    background-color: #333;
+    background-color: $main;
     font-family: 'Rubik', Roboto sans-serif;
     font-size: 16px;
     margin: 0;
@@ -19,6 +19,16 @@ p {
     margin: 0;
     font-size: 16px;
     line-height: 24px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 47px;
+    color: $white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity $transition;
 }
 
 * {
