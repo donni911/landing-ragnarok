@@ -18,11 +18,11 @@
     transition: $transition background;
 }
 
-@mixin hoverViolet {
+@mixin hoverButton($bg: $violet) {
 
     &:hover,
     &.active {
-        background: rgba($violet, 0.5);
+        background: rgba($bg, 0.5);
     }
 }
 
@@ -30,4 +30,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@mixin absoluteCentering {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

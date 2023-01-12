@@ -21,7 +21,7 @@
     }
 
     &::after {
-        // background: url(../images/snow.gif) no-repeat center/cover;
+        background: url(../images/snow.gif) no-repeat center/cover;
         opacity: 0.1;
     }
 
@@ -90,6 +90,9 @@
                 text-transform: uppercase;
                 transform: translateX(-200px);
                 opacity: 0;
+
+                transition: opacity $transition linear, transform $transition linear;
+
             }
         }
 
@@ -175,8 +178,7 @@
 
                 ul {
                     opacity: 1;
-                    transform: translateX(0);
-                    transition: opacity $transition, transform $transition;
+                    transform: translateX(0px);
                 }
             }
         }
@@ -238,19 +240,7 @@
 
     &-button {
         @include button;
-        @include hoverViolet;
+        @include hoverButton;
         margin-top: 36px;
-    }
-}
-
-@keyframes move {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
     }
 }

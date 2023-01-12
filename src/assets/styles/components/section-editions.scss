@@ -61,7 +61,7 @@
 
         &__button {
             @include button;
-            @include hoverViolet;
+            @include hoverButton;
             margin-left: auto;
             font-size: 13px;
             padding: 8px 18px;
