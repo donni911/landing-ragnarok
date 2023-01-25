@@ -1,17 +1,16 @@
-const videoWrapper = document.querySelector(".js-video")
-const videoBtn = videoWrapper.querySelector(".js-video-btn")
+import { classes } from '../Utilities/Classes'
 
-const video = videoWrapper.querySelector("video")
-
+const video = document.getElementById('video')
+const videoButton = document.querySelector('.video-btn')
 let isPlay = false
 
 const handleVideo = ({ target }) => {
-  const info = target.parentElement
+	const info = target.parentElement
 
-  isPlay = !isPlay
-  info.classList.toggle("hidden", isPlay)
-  target.innerText = isPlay ? "Pause" : "Play"
-  isPlay ? video.play() : video.pause()
+	isPlay = !isPlay
+	info.classList.toggle(classes.hidden, isPlay)
+	target.innerText = isPlay ? 'Pause' : 'Play'
+	isPlay ? video.play() : video.pause()
 }
 
-videoBtn.addEventListener("click", handleVideo)
+videoButton.addEventListener('click', handleVideo)

@@ -1,0 +1,16 @@
+{
+    "values": [
+        {
+            "price": 19.99,
+            "title": "Standard Edition"
+        },
+        {
+            "price": 18.99,
+            "title": "Standard Edition"
+        },
+        {
+            "price": 29.99,
+            "title": "Deluxe Edition"
+        }
+    ]
+}

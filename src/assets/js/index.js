@@ -1,6 +1,16 @@
-import "../styles/styles.scss"
+// Build styling
+import '../styles/reset.scss'
+import '../styles/mixins.scss'
+import '../styles/colors.scss'
+import '../styles/styles.scss'
 
-import "./components/menu-btn.js"
-import "./components/timer.js"
-import "./components/video.js"
-import "./components/checkboxes.js"
+// Components
+import './Components/Checkboxes'
+import './Components/Header'
+import './Components/Swiper'
+import './Components/Video'
+import './Components/FAQ'
+import './Components/Timer'
+import './Components/Translations'
+import './Components/Transitions'
+import './Components/Modal'
