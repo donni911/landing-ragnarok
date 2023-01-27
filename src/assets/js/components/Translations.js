@@ -1,25 +1,25 @@
-import { languages } from '../Components/Languages'
+import { languages } from '../Components/Languages.js'
 
 const language = document.querySelectorAll('.language')
 
 const setTexts = () => {
-	const lang = localStorage.getItem('lang') || 'en'
+    const lang = localStorage.getItem('lang') || 'en'
 
-	const content = languages[lang]
+    const content = languages[lang]
 
-	Object.entries(content).forEach(([key, value]) => {
-		const items = document.querySelectorAll(`[data-text="${key}"]`)
-		items.forEach((item) => (item.innerText = value))
-	})
+    Object.entries(content).forEach(([key, value]) => {
+        const items = document.querySelectorAll(`[data-text="${key}"]`)
+        items.forEach((item) => (item.innerText = value))
+    })
 }
 
 const toggleLanguage = ({ target }) => {
-	const { lang } = target.dataset
+    const { lang } = target.dataset
 
-	if (!lang) return
+    if (!lang) return
 
-	localStorage.setItem('lang', lang)
-	setTexts()
+    localStorage.setItem('lang', lang)
+    setTexts()
 }
 
 setTexts()

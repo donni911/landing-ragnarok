@@ -26,4 +26,5 @@ const startTimer = (date) => {
 	}, 1000)
 }
 
+
 startTimer('February 10, 2023 00:00:00')

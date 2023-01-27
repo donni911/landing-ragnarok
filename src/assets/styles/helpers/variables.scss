@@ -1,0 +1,29 @@
+$main: #1c2023;
+$dark: #30373f;
+$violet: #8856d9;
+$sea: #a9c7c7;
+$grey: #8c96a0;
+$orange: #ff4136;
+$white: #fff;
+$black: #000;
+
+
+$screens: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+// Media Screens
+
+@function screen($breakpointName: lg, $desktopFirst: false) {
+    $breakpointVal: map-get($screens, $breakpointName);
+
+    @if $desktopFirst {
+        $breakpointVal: $breakpointVal - 1;
+    }
+
+    @return $breakpointVal;
+}

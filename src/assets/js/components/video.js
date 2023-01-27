@@ -1,4 +1,4 @@
-import { classes } from '../Utilities/Classes'
+import { classes } from '../Utilities/Classes.js'
 
 const video = document.getElementById('video')
 const videoButton = document.querySelector('.video-btn')

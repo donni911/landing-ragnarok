@@ -1,16 +1,13 @@
 // Build styling
-import '../styles/reset.scss'
-import '../styles/mixins.scss'
-import '../styles/colors.scss'
-import '../styles/styles.scss'
+import '../styles/app.scss'
 
-// Components
-import './Components/Checkboxes'
-import './Components/Header'
-import './Components/Swiper'
-import './Components/Video'
-import './Components/FAQ'
-import './Components/Timer'
-import './Components/Translations'
-import './Components/Transitions'
-import './Components/Modal'
+// Components js
+import './Components/Checkboxes.js'
+import './Components/Header.js'
+import './Components/Swiper.js'
+import './Components/Video.js'
+import './Components/FAQ.js'
+import './Components/Timer.js'
+import './Components/Translations.js'
+import './Components/Transitions.js'
+import './Components/Modal.js'

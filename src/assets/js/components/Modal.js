@@ -1,5 +1,5 @@
-import values from '../../data.json'
-import { classes } from '../Utilities/Classes'
+import values from '@/data/data.json'
+import { classes } from '../Utilities/Classes.js'
 
 let valuesJson = values.values
 
@@ -9,6 +9,7 @@ const modalTitle = document.querySelector('.modal-version')
 const modalPrice = document.querySelector('.modal-total__price')
 const modalClose = document.querySelector('.modal-close')
 const buyButton = document.querySelectorAll('.buy-button')
+
 
 const handleBuyButton = ({ currentTarget: target }) => {
     const { value } = target.dataset

@@ -6,10 +6,11 @@
     "scripts": {
         "build": "webpack --config webpack.prod.js",
         "watch": "webpack --config webpack.prod.js --watch",
-        "start": "webpack serve --open --config webpack.dev.js"
+        "dev": "webpack serve --open --config webpack.dev.js "
     },
     "author": "",
     "license": "ISC",
+    "type": "module",
     "devDependencies": {
         "css-loader": "^6.7.1",
         "html-webpack-plugin": "^5.5.0",
@@ -17,6 +18,7 @@
         "sass-loader": "^13.1.0",
         "serve": "^14.2.0",
         "style-loader": "^3.3.1",
+        "twig-html-loader": "^0.1.9",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-dev-server": "^4.11.1"
@@ -24,8 +26,14 @@
     "dependencies": {
         "@babel/core": "^7.20.12",
         "babel-loader": "^9.1.2",
+        "babel-register": "^6.26.0",
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^11.0.0",
         "css-minimizer-webpack-plugin": "^4.2.2",
+        "html-loader": "^4.2.0",
+        "image-webpack-loader": "^8.1.0",
         "mini-css-extract-plugin": "^2.7.2",
+        "raw-loader": "^4.0.2",
         "swiper": "^8.4.4",
         "webpack-merge": "^5.8.0"
     }
