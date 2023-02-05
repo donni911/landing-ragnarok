@@ -1,13 +1,12 @@
 import nodePath from 'node:path'
-import fs from 'node:fs'
 import { fileURLToPath } from 'node:url'
+import fs from 'node:fs'
 
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 
 const __dirname = nodePath.dirname(fileURLToPath(import.meta.url))
 
-// filter out anything that starts with an underscore or is not a twig file
 function walk(dir) {
     console.log(dir)
     let results = []
@@ -36,32 +35,16 @@ function walk(dir) {
 }
 const files = walk('./src/templates')
 
-console.log(files)
-
 const htmlPlugins = files.map(
     (file) =>
         new HtmlWebpackPlugin({
-            filename: file.replace('./src/', '').replace('.twig', '.html'),
+            filename: file
+                .replace('./src/templates/', '')
+                .replace('.twig', '.html'),
             template: nodePath.resolve(__dirname, file),
             hash: true,
         })
 )
-
-let htmlFiles = []
-
-let directories = ['src']
-
-while (directories.length > 0) {
-    var directory = directories.pop()
-    var dirContents = fs
-        .readdirSync(directory)
-        .map((file) => nodePath.join(directory, file))
-
-    htmlFiles.push(...dirContents.filter((file) => file.endsWith('.html')))
-    directories.push(
-        ...dirContents.filter((file) => fs.statSync(file).isDirectory())
-    )
-}
 
 const common = {
     entry: {
@@ -83,15 +66,6 @@ const common = {
                 },
             ],
         }),
-
-        // ...htmlFiles.map(
-        //     (htmlFile) =>
-        //         new HtmlWebpackPlugin({
-        //             template: htmlFile,
-        //             title: 'God of War' + ' | Main',
-        //             filename: htmlFile.replace(nodePath.normalize('src/'), ''),
-        //         })
-        // ),
     ].concat(htmlPlugins),
 
     module: {

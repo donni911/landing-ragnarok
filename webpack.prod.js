@@ -10,7 +10,7 @@ export default merge(common, {
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: 'css/[name].[contenthash].css',
             chunkFilename: '[id].css',
         }),
     ],
